@@ -1,0 +1,43 @@
+colorscheme Tomorrow-Night
+"color molokai
+set history=2000
+set nospell  
+set nofoldenable
+set fileformats=unix
+set shiftwidth=4 " Use indents of 4 spaces
+nnoremap <silent> <leader>h :noh<CR>
+" CTRL-Tab is next tab
+noremap <C-Tab> :<C-U>tabnext<CR>
+inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
+cnoremap <C-Tab> <C-C>:tabnext<CR>
+" CTRL-SHIFT-Tab is previous tab
+noremap <C-S-Tab> :<C-U>tabprevious<CR>
+inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
+cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
+
+if isdirectory(expand("~/.vim/bundle/nerdtree"))
+    "map <leader>j :NERDTreeToggle<CR>
+    map <leader>j <plug>NERDTreeTabsToggle<CR>
+    let NERDTreeQuitOnOpen=0
+endif
+if isdirectory(expand("~/.vim/bundle/tagbar/"))
+    nnoremap <silent> <leader>k :TagbarToggle<CR>
+endif
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
+if !exists("g:spf13_no_big_font")
+    if LINUX() && has("gui_running")
+        set guifont=Andale\ Mono\ Regular\ 10,Menlo\ Regular\ 10,Consolas\ Regular\ 10,Courier\ New\ Regular\ 10
+    elseif OSX() && has("gui_running")
+        set guifont=Andale\ Mono\ Regular:h10,Menlo\ Regular:h10,Consolas\ Regular:h10,Courier\ New\ Regular:h10
+    elseif WINDOWS() && has("gui_running")
+        set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
+    endif
+endif
+
+if !exists('g:spf13_bundle_groups')
+    let g:spf13_bundle_groups=['general', 'writing', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc', 'go', 'scala', 'haskell', 'puppet']
+endif
