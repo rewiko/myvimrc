@@ -5,7 +5,7 @@ set history=2000
 set nospell  
 set nofoldenable
 set fileformats=unix
-set shiftwidth=4 " Use indents of 4 spaces
+set shiftwidth=2 " Use indents of 2 spaces
 nnoremap <silent> <leader>h :noh<CR>
 " CTRL-Tab is next tab
 noremap <C-Tab> :<C-U>tabnext<CR>
