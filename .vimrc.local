@@ -2,12 +2,15 @@ colorscheme Tomorrow-Night
 let g:airline_theme='molokai'
 "color molokai
 set guifont=Monospace:h12
-set history=2000
+set history=4000
 set nospell  
 set nofoldenable
 set fileformats=unix
 set shiftwidth=2 " Use indents of 2 spaces
+
+" fix highlight
 hi Visual term=reverse cterm=reverse guibg=Grey
+
 nnoremap <silent> <leader>h :noh<CR>
 " CTRL-Tab is next tab
 noremap <C-Tab> :<C-U>tabnext<CR>
