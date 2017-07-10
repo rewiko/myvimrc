@@ -8,6 +8,9 @@ set nofoldenable
 set fileformats=unix
 set shiftwidth=2 " Use indents of 2 spaces
 
+" disable auto hide " for json file
+set conceallevel=0
+
 " fix highlight
 hi Visual term=reverse cterm=reverse guibg=Grey
 
