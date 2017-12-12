@@ -1,4 +1,5 @@
 UnBundle 'AutoClose'
 UnBundle 'jiangmiao/auto-pairs'
 Bundle 'derekwyatt/vim-scala'
-
+Plugin 'posva/vim-vue'
+Plugin 'editorconfig/editorconfig-vim'
