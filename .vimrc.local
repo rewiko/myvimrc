@@ -51,3 +51,6 @@ if !exists("g:spf13_no_big_font")
     endif
 endif
 
+let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=vendor --ignore-dir=node_modules"
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
