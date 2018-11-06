@@ -11,7 +11,7 @@ set shiftwidth=2  " (sw) width (in spaces) used in each step of autoindent (aswe
 " Need to be after tabstop and shiftwidth
 set expandtab     " (et) expand tabs to spaces (use :retab to redo entire file)
 
-set shell=/usr/bin/zsh
+set shell=zsh
 
 " disable auto hide " for json file
 set conceallevel=0
